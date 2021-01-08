@@ -1,38 +1,216 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
+html, body, #root {
   background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+html, body, #root {
+  color: #fff;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.two-rem{
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+.padding-top-15{
+  padding-top: 15px;
+}
+
+.padding-bottom-15{
+  padding-bottom: 15px;
+}
+
+.padding-top-30{
+  padding-top: 15px;
+}
+
+.bold{
+  font-weight:bold;
+}
+
+.input .input-container{
+  position: relative;
+  width: 100%;
+}
+
+.input .input-container .form-control{
+  border-radius: .1em;
+}
+
+.input .input-container .input-dropdown{
+  position: absolute;
+  left: 0px;
+  width: 100%;
+  z-index: 999;
+}
+
+.input .input-container .suggestion-item, .input .input-container .suggestion-item--active{
+  padding: 15px;
+  color: black;
+  cursor: pointer;
+}
+
+.input .input-container .suggestion-item{
+  background-color: #fff;
+}
+
+.input .input-container .suggestion-item--active{
+  background-color: #fafafa;
+}
+
+.current-weather {
+  text-transform: uppercase;
+}
+
+.current-weather p{
+  font-style: bold;
+  font-weight: 700;
+  padding-top: 15px;
+  font-size: 1.2rem;
+}
+
+.current-weather .description{ 
+  padding-top: 0px;  
+}
+
+.current-weather .icon {
+  margin: 30px 0 0 0;
+}
+
+.current-weather .main-temp {
+  margin: 0px 0 50px 0;
+}
+
+.current-weather .main-temp .main-degrees{
+  font-size:2rem;
+  font-weight: 1000;
+  vertical-align: 65px;
+}
+
+.current-weather .main-temp h2 {
+  font-weight: 600;
+  font-size: 8rem;
+}
+
+.hourly-weather-label{
+  margin-bottom: 50px;
+}
+
+.hourly-weather-label p{
+  margin-bottom: 0px;
+}
+
+.hourly-weather{
+  margin-bottom: 50px;
+}
+
+.hourly-weather p{  
+  font-style: bold;
+  font-weight: 700;
+  padding-top: 0px;
+  font-size: 1.2rem;
+}
+
+.hourly-weather .hourly-small{
+  font-size:.7em;
+}
+
+.hourly-weather .hourly-temp{
+  font-size:1.2em;
+}
+
+.degrees{
+  font-size: 0.5rem;
+  font-weight: 700;
+  vertical-align: 7px;
+  padding-left: 3px;
+}
+
+.toggle-more-data{
+  text-decoration: underline;
+  font-style: bold;
+  font-weight: 700;
+  margin-bottom: 50px;
+  font-size: 1.2rem;
+}
+
+.toggle-more-data:hover{
+  cursor: pointer;
+}
+
+.hide-more-data{
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: opacity 600ms, visibility 600ms, height 600ms;
+  transition: opacity 600ms, visibility 600ms, max-height 600ms;
+  max-height:0px;
+}
+
+.show-more-data{
+  visibility: visible;
+  opacity: 1;
+  -webkit-transition: opacity 600ms, visibility 600ms, height 600ms;
+  transition: opacity 600ms, visibility 600ms, max-height 600ms;
+  margin-bottom: 50px;
+  max-height: 2000px;
+}
+
+.more-data-meta {
+  margin-bottom: 50px;
+}
+
+.single-day {
+  border-right: 2px white solid;
+}
+
+.daily-weather :last-child {
+  border-right: none;
+}
+
+@media (max-width: 768px) {  
+  .main-icon {
+    margin: 30px 0px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .display-1{
+    margin: 25px 0px 25px 0px;
+  }
+
+  .main-temp .calendar{
+    display: none;
+  }
+
+  .main-temp .marker{
+    display: none;
+  }
+
+  .more-data-col{
+    margin-bottom: 50px;
+  }
+
+  .daily-weather-label{
+    margin-bottom: 50px;
+  }
+
+  .daily-weather-label p{
+    margin-bottom: 0px;
+  }
+  
+  .single-day{
+    border: none;
+  }
+
+  .single-hourly-weather{
+    margin-bottom: 50px;
+  }
+
+  .margin-bottom{
+    margin-bottom: 30px;
+  }
+
+  .single-day{
+    margin-bottom: 50px;
   }
 }
+
+
+
