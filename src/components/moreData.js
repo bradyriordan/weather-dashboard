@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { IconContext } from "react-icons";
 import { WiSunrise, WiSunset, WiStrongWind, WiHumidity } from "react-icons/wi";
 import { RiArrowDropUpLine, RiArrowDropDownLine, RiArrowDropRightLine } from "react-icons/ri";
@@ -13,6 +13,10 @@ const convertTime = (time) => {
 const MoreData = ({data}) => {
     const [moreData, toggleMoreData] = useState('hide-more-data');
     const [moreLess, toggleMoreLess] = useState('MORE');
+    useEffect(() => {
+        toggleMoreData('hide-more-data');
+        toggleMoreLess('MORE');
+    },[data])
     return (
         <>
             <div className="row text-center toggle-more-data">
@@ -97,7 +101,7 @@ const MoreData = ({data}) => {
                         <p>{Math.round(data.current.wind_speed)} km/h</p>
                     </div>
                 </div>
-                <HourlyWeather data={data} />
+                <HourlyWeather data={data.hourly} />
             </div>
         </>
     )

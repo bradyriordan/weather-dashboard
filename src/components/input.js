@@ -1,5 +1,5 @@
 import React from 'react';
-import Currentweather from '../components/currentWeather'
+import Currentweather from './currentWeather'
 import PlacesAutocomplete, {
   geocodeByAddress,
   getLatLng,

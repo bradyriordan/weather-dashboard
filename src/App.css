@@ -34,6 +34,11 @@ html, body, #root {
 
 .input .input-container .form-control{
   border-radius: .1em;
+  border-radius: 0px;
+  border: none;
+  background-color: #282c34;
+  border-bottom: solid 2px;
+  color: white;
 }
 
 .input .input-container .input-dropdown{
@@ -86,13 +91,24 @@ html, body, #root {
   vertical-align: 65px;
 }
 
+.daily-weather-more-data .degrees-big{
+  font-size: 0.8rem;
+  font-weight: 700;
+  vertical-align: 18px;
+  padding-left: 3px;
+}
+
 .current-weather .main-temp h2 {
   font-weight: 600;
   font-size: 8rem;
 }
 
 .hourly-weather-label{
-  margin-bottom: 50px;
+  margin-bottom: 30px;
+}
+
+.daily-weather-label{
+  margin-bottom: 30px;
 }
 
 .hourly-weather-label p{
@@ -160,10 +176,21 @@ html, body, #root {
 
 .single-day {
   border-right: 2px white solid;
+  -webkit-transition: background-color 600ms;
+  transition: background-color 400ms;
+}
+
+.single-day:hover {
+  cursor:pointer;
+  background-color:#2d3035;
 }
 
 .daily-weather :last-child {
   border-right: none;
+}
+
+.daily-weather{
+  margin-bottom: 50px;
 }
 
 @media (max-width: 768px) {  
@@ -185,7 +212,7 @@ html, body, #root {
 
   .more-data-col{
     margin-bottom: 50px;
-  }
+  } 
 
   .daily-weather-label{
     margin-bottom: 50px;
@@ -208,6 +235,14 @@ html, body, #root {
   }
 
   .single-day{
+    margin-bottom: 50px;
+  }
+
+ .single-daily-weather-more-data{
+    margin-bottom: 50px;
+  }
+
+  .single-daily-weather-more-data p{
     margin-bottom: 50px;
   }
 }

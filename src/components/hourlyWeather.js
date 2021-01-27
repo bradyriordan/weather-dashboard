@@ -17,7 +17,7 @@ const HourlyWeather = ({ data }) => {
                     </div>
                 </div>
                 <div className="row padding-top-30 hourly-weather text-center">                
-                    {data.hourly.map((element, i) => {
+                    {data.map((element, i) => {
                         if(i <= 11 ){
                             return (
                                 <div className="col-2 col-md-1 text-center single-hourly-weather" key={i}>                            

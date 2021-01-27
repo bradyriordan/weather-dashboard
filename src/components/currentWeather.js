@@ -6,8 +6,6 @@ import { IconContext } from "react-icons";
 import { AiOutlineCalendar } from "react-icons/ai";
 import { GiPositionMarker } from "react-icons/gi";
 
-
-
 const getDate = () => {    
     const date = new Date(Date.now()).toLocaleString("en-US", {weekday: 'long', month: 'long', day: 'numeric'}).replace(/,?\s/, " ");
     return date
@@ -27,7 +25,7 @@ const CurrentWeather = ({ latLng, city }) => {
                 <div className="current-weather">
                     <div className="row main-icon">
                         <div className="col text-center icon">
-                            <Icon icon={data.current.weather[0].icon} />
+                            <Icon icon={data.current.weather[0].icon} size="10em" />
                             <p className="text-muted description">{data.current.weather[0].description}</p>                            
                         </div>
                     </div>
@@ -56,7 +54,7 @@ const CurrentWeather = ({ latLng, city }) => {
 
                     <MoreData data={data} />                   
 
-                    <DailyWeather data={data} />  
+                    <DailyWeather data={data.daily} />  
 
                 </div>
             </>
